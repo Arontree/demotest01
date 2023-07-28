@@ -5,6 +5,14 @@ $(function(){
 function publish() {
 	$("#publishModal").modal("hide");
 
+
+	// 发送AJAX请求之前,将CSRF令牌设置到请求的消息头中.
+//    var token = $("meta[name='_csrf']").attr("content"); meta属性值，其中的"content"随机的字符串
+//    var header = $("meta[name='_csrf_header']").attr("content"); key
+//    $(document).ajaxSend(function(e, xhr, options){
+//        xhr.setRequestHeader(header, token);
+//    });
+
 	// 获取标题和内容
 	//用于获取表单中具有指定 ID 的元素的值。它通常用于获取用户输入的值，例如输入框中的文本或下拉列表中的选项。
 	var title = $("#recipient-name").val();
